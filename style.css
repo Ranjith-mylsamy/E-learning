@@ -199,7 +199,7 @@ header #menu{
 }
 /*space between the border input box and p*/
 .login-form form .box:nth-child(3){
-    margin-bottom: 5rem;
+    margin-bottom:5rem;
 }
 .login-form form p{
     font-size: 1.4rem;
@@ -217,6 +217,10 @@ header #menu{
 .login-form form .btn:hover{
     color:black;
     background:linear-gradient(#009ffd, #2a2a72);
+}
+.login-form .sign-in-with-google p {
+    color:#eee;
+    font-size:2rem;
 }
 /*times button adjustment*/
 .login-form form .fa-times{
