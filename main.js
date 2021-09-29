@@ -70,5 +70,28 @@ function signin(){
           }
         }
       );
+      function login(){
+        
+      }
+      function logout(){
+        
+      }
+      firebase.auth().onAuthStateChanged((user) => {
+        var notLoggedIn = document.getElementsByClassName('not-logged-in')
+        var LoggedIn = document.getElementsByClassName('logged-in')
+        if (user) {
+          // User is signed in, see docs for a list of available properties
+          // https://firebase.google.com/docs/reference/js/firebase.User
+          loggedIn.style.display = 'block'
+          notLoggedIn.style.display='none'
+          var uid = user.uid;
+          // ...
+        } else {
+          loggedIn.style.display = 'none'
+          notLoggedIn.style.display='block'
+          // User is signed out
+          // ...
+        }
+      });
 
   

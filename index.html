@@ -28,22 +28,26 @@
 <!--header section ends-->
 <!-- login form -->
 <div class="login-form">
+    <div class="not-logged-in">
     <form action="">
         <h3>Login</h3>
+        <h3 class="side-h3">Please login!</h3>
         <input type="email" placeholder="username" class="box">
         <input type="password" placeholder="password" class="box">
         <p>forget password? <a href="#">click here</a></p>
         <p>New to page? <a href="#">register now</a></p>
-        <input type="submit" class="btn" value="login">
+        <button class="btn">Login</button>
         <div class=" sign-in-with-google">
         <button class="btn"><p align="right" i class="fab fa-google"> Sign in with Google</p>
         <!--<img src="./Image/btn_google_dark_normal_ios.svg" height="35" align="left" alt=""><!-->
         </button>
         </div>
         <i class="fas fa-times"></i>
-
-
-    </form>
+        <div class="logged-in">
+            <h4>You are logged in!</h4>
+            <button class="btn">Logout</button>
+        </div>
+    </div>
 </div>
 <!--home section starts-->
 <section class="home" id="home">
