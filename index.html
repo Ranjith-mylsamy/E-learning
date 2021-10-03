@@ -28,11 +28,12 @@
 <!--header section ends-->
 <!-- login form -->
 <div class="login-form">
-    <div class="not-logged-in">
     <form action="">
-        <h3>Login</h3>
-        <h3 class="side-h3">Please login!</h3>
-        <input type="email" placeholder="username" class="box">
+        <ul>
+            <li class="login"><a href="#">Login</a></li>
+            <li class="signup"><a href="#">SignUp</a></li>
+        </ul>
+        <input type="email" placeholder="email" class="box">
         <input type="password" placeholder="password" class="box">
         <p>forget password? <a href="#">click here</a></p>
         <p>New to page? <a href="#">register now</a></p>
@@ -43,11 +44,18 @@
         </button>
         </div>
         <i class="fas fa-times"></i>
-        <div class="logged-in">
-            <h4>You are logged in!</h4>
-            <button class="btn">Logout</button>
-        </div>
-    </div>
+    </form>
+</div>
+<div class="sign-up-form">
+    <form action="">
+    <input type="name" placeholder="name" class="box">
+    <input type="email" placeholder="email" class="box">
+    <input type="password" placeholder="password" class="box">
+    <input type="password" placeholder="re-enter password" class="box">
+    <button class="btn">Signin</button>
+    <button class="btn">SignOut</button>
+    <i class="fas fa-times"></i>
+    </form>
 </div>
 <!--home section starts-->
 <section class="home" id="home">

@@ -115,7 +115,7 @@ header .navbar ul{
 }
 
 header .navbar ul li{
-    margin:0 1rem;
+    margin:0 2rem;
 }
 header .navbar ul li a{
     font-size: 2rem;
@@ -169,11 +169,54 @@ header #menu{
     position: relative;
 }
 /*h3 adjustment*/
-.login-form form h3{
+.login-form ul{
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    list-style: none;
+    width:90%;
+    font-size:3rem;
+    color:#009ffd;
+}
+.login-form ul .login a{
+    font-size:3rem;
+    color:#009ffd;
+}
+.login-form ul .login a:hover{
+    color:#111;
+}
+.login-form ul .login{
+    padding:1rem;
+}
+.login-form ul .login{
+    margin-bottom:1rem;
+}
+/*.login-form form h3{
     font-size: 3rem;
+    position: relative;
+    left:0rem;
     color:#009ffd;
     padding:1rem 0;
+    cursor:pointer;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 700px;
+    margin-left: 1px;
+    overflow: hidden;
 }
+.login-form form h3:hover{
+    color:#111;
+}
+.login-form form .signup-font h3{
+    color:#009ffd;
+    position:relative;
+    font-size:3rem;
+    right:0rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 700px;
+    margin-left: 1px;
+}*/
 /*input box adjustment*/
 .login-form form .box{
     width:100%;
@@ -199,7 +242,7 @@ header #menu{
 }
 /*space between the border input box and p*/
 .login-form form .box:nth-child(3){
-    margin-bottom:1rem;
+    margin-bottom:2rem;
 }
 .login-form form p{
     font-size: 1.4rem;
@@ -218,22 +261,10 @@ header #menu{
     color:black;
     background:linear-gradient(#009ffd, #2a2a72);
 }
-/*backend for login btn*/
 .login-form .sign-in-with-google p {
     color:#eee;
     font-size:2rem;
 }
-.login-form .not-logged-in form .side-h3{
-    font-size:1.5rem;
-    color:red;
-}
-.login-form .logged-in h4{
-    font-size:2rem;
-}
-.login-form .logged-in .btn{
-    font-size: 2rem;
-}
-
 /*times button adjustment*/
 .login-form form .fa-times{
     position: absolute;
@@ -244,6 +275,95 @@ header #menu{
     color: #333;
 }
 .login-form form .fa-times:hover{
+    color: #5555c4;
+}
+.sign-up-form{
+    height: 100%;
+    width: 100%;
+    top:-120%;
+    left:0;
+    z-index:1000;
+    background: rgb(0, 0, 0,.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:fixed;
+}
+.sign-up-form.popup{
+    top:0;
+}
+.sign-up-form form{
+    width:35rem;
+    background:#fff;
+    margin:0 2rem;
+    padding:1rem 3rem;
+    border-radius:.5rem;
+    box-shadow: 0 .6rem .9rem rgb(58, 112, 148);
+    position: relative;
+}
+.login-form ul{
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    list-style: none;
+    width:90%;
+    font-size:3rem;
+    color:#009ffd;
+}
+.login-form ul .signup a{
+    font-size:3rem;
+    color:#009ffd;
+}
+.login-form ul .signup a:hover{
+    color:#111;
+}
+.login-form ul .signup{
+    padding:1rem;
+}
+.login-form ul .signup{
+    margin-bottom:1rem;
+}
+.sign-up-form form .box{
+    width:100%;
+    padding:1.2rem 0;
+    margin:1rem 0;
+    border-radius: 10px;
+    border:.2rem solid #666;
+    font-size:1.6rem;
+    color: #333;
+    text-transform: none;
+}
+/*input box text adjustment*/
+.sign-up-form form .box::placeholder{
+    padding: 1rem;
+    text-transform:uppercase;
+    font-style: italic;
+}
+/*underline text adjustment*/
+.sign-up-form form .box:focus{
+    border: 1px solid;
+    border-radius:15px;
+    border-color:rgb(255, 0, 0, 0.822);
+}
+.sign-up-form form .btn{
+    width:100%;
+    margin:1rem 0;
+}
+.sign-up-form form .btn:hover{
+    color:black;
+    background:linear-gradient(#009ffd, #2a2a72);
+}
+.sign-up-form form .fa-times{
+    position: absolute;
+    top:0.5rem;
+    right:2rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #333;
+    height:20px;
+    width:1px;
+}
+.sign-up-form form .fa-times:hover{
     color: #5555c4;
 }
 /*home section assigning*/

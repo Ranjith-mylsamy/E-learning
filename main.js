@@ -3,7 +3,6 @@ $(document).ready(function(){
     $('#menu').click(function(){
         $(this).toggleClass('fa-times');
         $('.navbar').toggleClass('nav-toggle');
-        
     });
     $('#login').click(function(){
         $('.login-form').addClass('popup');
@@ -11,6 +10,12 @@ $(document).ready(function(){
     $('.login-form form .fa-times').click(function(){
         $('.login-form').removeClass('popup');
     });
+    $('.login-form ul .signup').click(function(){
+      $('.sign-up-form').addClass('popup');
+   });
+   $('.sign-up-form form .fa-times').click(function(){
+      $('.sign-up-form').removeClass('popup');
+   });
     $('.login-form .sign-in-with-google p').click(function(event){
         event.preventDefault();
         signin() 
@@ -42,6 +47,8 @@ const firebaseConfig = {
     measurementId: "G-9WJJ7KFJTR"
   };
 firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth()
+const database = firebase.database()
 firebase.analytics();
 function signin(){
     console.log("hello")
@@ -70,28 +77,11 @@ function signin(){
           }
         }
       );
-      function login(){
-        
-      }
-      function logout(){
-        
-      }
-      firebase.auth().onAuthStateChanged((user) => {
-        var notLoggedIn = document.getElementsByClassName('not-logged-in')
-        var LoggedIn = document.getElementsByClassName('logged-in')
-        if (user) {
-          // User is signed in, see docs for a list of available properties
-          // https://firebase.google.com/docs/reference/js/firebase.User
-          loggedIn.style.display = 'block'
-          notLoggedIn.style.display='none'
-          var uid = user.uid;
-          // ...
-        } else {
-          loggedIn.style.display = 'none'
-          notLoggedIn.style.display='block'
-          // User is signed out
-          // ...
-        }
-      });
-
+/*sign up page commenses*/
+function signup(){
+    var email = document.getElementById("email");
+    var password = document.getElementById("password");
+    const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
+    promise.catch
+}
   
