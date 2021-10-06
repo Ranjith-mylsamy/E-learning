@@ -59,7 +59,7 @@ function signin(){
       var token = credential.accessToken;
       // The signed-in user info.
       var user = result.user;
-      console.log(user)
+      console.log("user:",user)
       // ...
     }).catch((error) => {
       // Handle Errors here.
@@ -73,15 +73,34 @@ function signin(){
     });}
     firebase.auth().onAuthStateChanged(async (user) => {
         if (user) {
-          console.log(user);
+          console.log(user.bc.emailVerified);
           }
         }
       );
 /*sign up page commenses*/
 function signup(){
-    var email = document.getElementById("email");
-    var password = document.getElementById("password");
-    const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
-    promise.catch
+  console.log("helo1")
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  firebase.auth().createUserWithEmailAndPassword(email, password)
+  .then((userCredential) => {
+    // Signed in
+    var user = userCredential.user;
+    alert(user);
+    // ...
+  })
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    console.log(errorCode,errorMessage);
+  });
 }
-  
+
+firebase.auth().signOut().then(() => {
+  // Sign-out successful.
+}).catch((error) => {
+  // An error happened.
+});
+
+
+document.querySelector("#sign-up-btn").addEventListener("click",signup);
