@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+  $("#loginImg").css('display', 'none');
     $('#menu').click(function(){
         $(this).toggleClass('fa-times');
         $('.navbar').toggleClass('nav-toggle');
@@ -15,6 +15,10 @@ $(document).ready(function(){
    });
    $('.sign-up-form form .fa-times').click(function(){
       $('.sign-up-form').removeClass('popup');
+   });
+   $('.login-form form .btn').click(function(event){
+    event.preventDefault();
+    login() 
    });
     $('.login-form .sign-in-with-google p').click(function(event){
         event.preventDefault();
@@ -73,20 +77,43 @@ function signin(){
     });}
     firebase.auth().onAuthStateChanged(async (user) => {
         if (user) {
-          console.log(user.bc.emailVerified);
+          console.log(user);
+          document.getElementById("userName").innerHTML = user.bc.displayName;
+          //document.getElementById("login").innerHTML = user.bc.photoURL;
+          $( '#loginImg' ).attr( 'src', user.bc.photoURL );
+          $("#loginImg").css('display', 'inline');
+          $('.sign-up-form').removeClass('popup');
+           $('.login-form').removeClass('popup');
           }
         }
       );
+function login(){
+  var email = document.getElementById("lemail").value;
+  var password = document.getElementById("lpassword").value;
+  firebase.auth().signInWithEmailAndPassword(email, password)
+  .then((userCredential) => {
+    // Signed in
+    var user = userCredential.user;
+    // ...
+  })
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+  }); 
+}
 /*sign up page commenses*/
 function signup(){
   console.log("helo1")
+  var name = document.getElementById("name").value;
   var email = document.getElementById("email").value;
   var password = document.getElementById("password").value;
   firebase.auth().createUserWithEmailAndPassword(email, password)
   .then((userCredential) => {
     // Signed in
     var user = userCredential.user;
-    alert(user);
+    console.log(userCredential);
+    document.getElementById("userName").innerHTML = userCredential;
+    
     // ...
   })
   .catch((error) => {
@@ -95,12 +122,19 @@ function signup(){
     console.log(errorCode,errorMessage);
   });
 }
-
+document.querySelector("#sign-up-btn").addEventListener("click",signup);
+function signout(){
 firebase.auth().signOut().then(() => {
   // Sign-out successful.
+  $("#loginImg").css('display', 'none');
+  console.log("signed_out");
+  $('.sign-up-form').removeClass('popup');
+  $('.login-form').removeClass('popup');
+  document.getElementById("userName").innerHTML = " ";
+  
 }).catch((error) => {
   // An error happened.
+
 });
-
-
-document.querySelector("#sign-up-btn").addEventListener("click",signup);
+}
+document.querySelector("#sign-out-btn").addEventListener("click",signout);

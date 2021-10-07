@@ -22,8 +22,10 @@
             <li><a href="#course">course</a></li>
         </ul>
     </nav>
-    <div id="login" class="fas fa-user-circle"></div>
-
+    <div id="login" class="fas fa-user-circle">
+        <span id="userName"></span>
+        <img src="" id="loginImg"/>
+    </div>
 </header>
 <!--header section ends-->
 <!-- login form -->
@@ -33,8 +35,8 @@
             <li class="login"><a href="#">Login</a></li>
             <li class="signup"><a href="#">SignUp</a></li>
         </ul>
-        <input type="email" placeholder="email" class="box">
-        <input type="password" placeholder="password" class="box">
+        <input type="email" id="lemail" placeholder="email" class="box">
+        <input type="password" id="lpassword" placeholder="password" class="box">
         <p>forget password? <a href="#">click here</a></p>
         <p>New to page? <a href="#">register now</a></p>
         <button class="btn">Login</button>
@@ -53,7 +55,7 @@
     <input type="password" id="password" placeholder="password" class="box">
     <input type="password" placeholder="re-enter password" class="box">
     <button class="btn" id="sign-up-btn">Signin</button>
-    <button class="btn">SignOut</button>
+    <button class="btn" id="sign-out-btn">SignOut</button>
     <i class="fas fa-times"></i>
     </form>
 </div>
@@ -234,7 +236,7 @@
         <input type="password" placeholder="your password" class="box">
         <input type="number" placeholder="your number" class="box">
         <textarea name=""id=""cols="30" rows="10" class="box address" placeholder="your address"></textarea>
-        <input type="submit" class="btn" value="send now">
+        <input type="submit" class="btn" onclick="alert('Message sent successfully..!')" value="send now">
     </form>
     <div class="image">
         <img src="Image/contact.png" alt="">
