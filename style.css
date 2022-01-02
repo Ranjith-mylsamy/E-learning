@@ -104,6 +104,9 @@ header .logo{
     color:#fff;
     font-size:2.5rem;
 }
+header .fa-graduation-cap{
+    font-size:3rem;
+}
 
 /* alignment of lists*/
 
@@ -633,6 +636,17 @@ header #menu{
 .footer .credit a{
     color:#009ffd;
 }
+.footer .upload{
+    padding:2rem 1rem;
+    font-size:2rem;
+    background: #111;
+    text-align: center;
+    color:#eee;
+}
+.footer .upload a{
+    color:#009ffd;
+    text-decoration: underline;
+}
 /*js commences incomplete*/
 .login-form form .fa-times{
     transform: rotate(90deg);
@@ -641,8 +655,159 @@ header #menu{
     top:0;
 }
 
+/* alignment of nav bar in admin*/
+header .navbar1 ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style:none;
+}
+
+header .navbar1 ul li{
+    margin:0 48rem;
+}
+header .navbar1 ul li a{
+    font-size: 2.5rem;
+    color:#fff;
+}
+.container 
+{
+    width: 100%;
+    height: 50%;
+    margin-top:50px;
+}
+.container .leftstyle {
+    width: 50%; 
+    height: 700px; 
+    float: left; 
+    background:white;
+}
+.container .leftstyle img{
+    height:cover;
+    width:100%;
+    object-fit: cover;
+}
+.container .rightstyle{
+    width:50%;
+    height:700px;
+    float:right;
+    background:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container .rightstyle p{
+    text-align: center;
+    text-decoration: underline;
+    font-size:30px;
+    margin-top:8rem;
+}
+.container .rightstyle .admin-sign-up-form ul li{
+    font-size:4rem;
+    list-style:none;
+    margin-top:8rem;    
+}
+/*admin sign-in*/
+.container .admin-sign-up-form form .box{
+    width:100%;
+    padding:1.5rem 0;
+    margin:1.5rem 0;
+    border-radius: 10px;
+    border:.2rem solid #666;
+    font-size:1.6rem;
+    color: #333;
+    text-transform: none;
+}
+/*admin input box text adjustment*/
+.container .admin-sign-up-form form .box::placeholder{
+    padding: 1rem;
+    text-transform:uppercase;
+    font-style: italic;
+}
+/*underline text adjustment*/
+.container .admin-sign-up-form form .box:focus{
+    border: 2px solid;
+    border-radius:15px;
+    border-color:rgb(255, 0, 0, 0.822);
+}
+.container .admin-sign-up-form form .btn{
+    width:28%;
+    margin:2rem 0;
+    display: flex;
+    flex-direction: column;
+}
 
 
+/*form page section*/
+.containerform{
+    background-color: white;
+    width:100%;
+    height:400px;
+    margin-top:2%;
+
+}
+.containerform .leftstyle1 {
+    width:50%; 
+    height: 800px; 
+    float: left; 
+    background:white;
+    margin-right:2rem;
+}
+.containerform .leftstyle1 img{
+    height:90%;
+    width:100%;
+    object-fit: cover;
+}
+.containerform .rightstyle1{
+    width:40%;
+    height:100px;
+    background-color: white;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.containerform .rightstyle1 p{
+    text-align: center;
+    text-decoration: underline;
+    font-size:3rem;
+    margin-top:5rem;
+    margin-left:13rem;
+    justify-content: center;
+}
+/*admin sign-in*/
+.containerform .admin-upload-form form .box{
+    width:30%;
+    padding:0.7rem 0;
+    margin:0.7rem 0;
+    border-radius: 10px;
+    border:.2rem solid #666;
+    font-size:1.6rem;
+    color: #333;
+    text-transform: none;
+    margin-left:13rem;
+}
+/*admin input box text adjustment*/
+.containerform .admin-upload-form form .box::placeholder{
+    padding: 1rem;
+    text-transform:uppercase;
+    font-style: italic;
+}
+/*underline text adjustment*/
+.containerform .admin-upload-form form .box:focus{
+    border: 2px solid;
+    border-radius:15px;
+    border-color:rgb(255, 0, 0, 0.822);
+}
+.containerform .admin-upload-form form .btn{
+    width:9%;
+    height:0%;
+    margin:2rem 0;
+    padding:2rem;
+    display: flex;
+    flex-direction: column;
+    left:18%;
+}
 
 
 

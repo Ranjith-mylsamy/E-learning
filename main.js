@@ -77,6 +77,9 @@ function signin(){
     });}
     firebase.auth().onAuthStateChanged(async (user) => {
         if (user) {
+          if(user.uid==="kXeuGluMPxdE3OtYu5kbWZ3DeAS2"){
+            signout();
+          }
           console.log(user);
           document.getElementById("userName").innerHTML = user.bc.displayName;
           //document.getElementById("login").innerHTML = user.bc.photoURL;
