@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device.width, initial scale=1.0">
+    <title>E-learning platform by RM</title>
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!--custom css file link-->
+    <link rel="stylesheet" href="./style.css">
+    <style>
+            .fullscreen {
+                
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+
+            }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar1">
+        <ul>
+            <li><a href id="#" class="logo"><i class="fas fa-graduation-cap"></i> E-learning platform</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="containerform">
+    <div class="leftstyle1">
+        <img src="Image/image-upload-concept-landing-page/2765820.jpg">
+    </div>
+    <div class="rightstyle1">
+        <p>
+            Upload the data here
+        </p>
+    </div>
+    <div class="admin-upload-form">
+        <form onsubmit="return false;">
+            <input type="text" placeholder="Course name" id="coursename" class="box">
+            <input type="text" placeholder="enter the image url" id="adminimgurl" class="box">
+            <input type="number" placeholder="Course price" id="courseprice" class="box">
+            <textarea name="" placeholder="Description about course" rows="10" cols="20" id="coursedescription" class="box address"></textarea>
+            <input type="number" placeholder="Course Duration" id="courseduration" class="box">
+            <input type="number" placeholder="Course Period" id="courseperiod" class="box">
+            <input type="number" placeholder="Course module" id="coursemodule" class="box">
+            <input type="text" placeholder="Course Video" id="coursevidurl" class="box">
+            <input type="submit" class="btn" value="send now">
+        </form>
+    </div>
+</div>
+<script src="./dbPoster.js" type="module"></script>
+</body>

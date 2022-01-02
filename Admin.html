@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device.width, initial scale=1.0">
+    <title>E-learning platform by RM</title>
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!--custom css file link-->
+    <link rel="stylesheet" href="./style.css">
+    <style>
+            .fullscreen {
+                
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+
+            }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar1">
+        <ul>
+            <li><a href id="#" class="logo"><i class="fas fa-graduation-cap"></i> E-learning platform</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="container">
+    <div class="leftstyle">
+        <img src="Image/follow-me-social-business-theme-design/50426.jpg">
+    </div>
+    <div class="rightstyle">
+    <P>
+        Admin Login Page
+    </P>
+    <div class="admin-sign-up-form">
+        <form onsubmit="return false;">
+            <ul>
+                <li><a href="#">Sign in</a></li>
+            </ul>
+            <input type="email" placeholder="email" class="box" id="admin-email">
+            <input type="password" placeholder="password" class="box" id="admin-password">
+            <button class="btn">Sign in</button>
+        </form>
+    </div>
+    </div>
+
+</div>
+<script src="./firebase-init.js" type="module"></script>
+<script src="./admin.js" type="module"></script>
+</body>
